@@ -1,4 +1,4 @@
-# ArgoCD Project
+# Set-up ArgoCD in Kubernetes
 
 This is a a demo project for setting up ArgoCD in your Kuberenetes Cluster and with a basic Example
 
@@ -32,7 +32,7 @@ This is a a demo project for setting up ArgoCD in your Kuberenetes Cluster and w
 
     This command will display all pods running in the `argocd` namespace.
 
-4 **List all secrets in the `argocd` namespace**:
+4. **List all secrets in the `argocd` namespace**:
 
     ```bash
     kubectl get secrets -n argocd
