@@ -8,7 +8,7 @@ spec:
   project: default
 
   source: 
-    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
+    repoURL: https://github.com/hassanahtasham/ArgoCD
     targetRevision: HEAD # It refers to the last commit in the repo
     path: dev
   destination:
