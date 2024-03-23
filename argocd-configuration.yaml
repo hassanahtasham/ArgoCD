@@ -10,7 +10,7 @@ spec:
   source: 
     repoURL: https://github.com/hassanahtasham/ArgoCD
     targetRevision: HEAD # It refers to the last commit in the repo
-    path: dev
+    path: app-src
   destination:
     server: https://kubernetes.default.svc # Defualt svc name of k8s in API server
     namespace: myapp
