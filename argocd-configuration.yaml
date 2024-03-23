@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp-argocdconfig-application
+  namespace: argocd
+
+spec: 
+  project: default
+
+  source: 
+    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
+    targetRevision: HEAD # It refers to the last commit in the repo
+    path: dev
+  destination:
+    server: https://kubernetes.default.svc # Defualt svc name of k8s in API server
+    namespace: myapp
+
+  syncPolicy:
+      syncOptions:
+      - CreateNamespace=true
+      
+      # To avoid any manual changes
+      automated: 
+        selfHeal: true
+        prune: true  # application will delete any resources that are managed by Argo CD but are not declared in the Git repository source.
+
+
