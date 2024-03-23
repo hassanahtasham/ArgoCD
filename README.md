@@ -1,4 +1,4 @@
-# Set-up ArgoCD in Kubernetes
+# Argo CD
 
 This is a a demo project for setting up ArgoCD in your Kuberenetes Cluster and with a basic Example
 
